@@ -1,0 +1,196 @@
+$box-radius: 4px;
+$side-padding: 10px;
+
+.form-master-container,
+.add-member-details-container,
+.verify-mobile-number-container {
+    background-color: var(--light-green);
+    border-radius: $box-radius;
+    padding: $side-padding;
+    margin-top: 20px;
+
+    .header-title {
+        background-color: var(--white);
+        border-radius: $box-radius;
+        padding: 10px 0;
+        // margin-bottom: 18px;
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--text);
+            margin: 0;
+            padding-left: 8px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .input-wrapper {
+            margin: 15px 0 0 0;
+            min-width: 32%;
+
+            .inputGroup {
+                font-family: 'Segoe UI', sans-serif;
+                margin: 0 0 5px 0;
+                position: relative;
+            }
+
+            .inputGroup input {
+                width: 100%;
+                border: none;
+                padding: .5em;
+                border-radius: $box-radius;
+                transition: all .2s ease-in-out;
+                font-size: 20px;
+                box-shadow: rgba(163, 163, 183, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                color: rgb(29, 29, 29);
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            .inputGroup label {
+                position: absolute;
+                font-size: 1.2em;
+                top: 50%;
+                left: 10px;
+                transform: translate(0%, -50%);
+                pointer-events: none;
+                color: var(--text);
+                transition: all .2s ease;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            .inputGroup :is(input:focus, input:valid)~label {
+                transform: translateY(-10%) translateX(-9%) scale(.8);
+                top: 10%;
+                color: var(--green-text-color);
+            }
+
+            .inputGroup :is(input:focus, input:valid) {
+                padding: 1.3em .5em .3em .5em;
+                outline: none;
+            }
+
+            .error-message {
+                padding-left: 8px;
+                color: rgba(255, 34, 34, 0.835);
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-family: "Open Sans", sans-serif;
+                display: none;
+            }
+        }
+
+    }
+    .add-member-button {
+        width: 100%;
+        border: none;
+        background-color: var(--button);
+        color: var(--white);
+        border-radius: $box-radius;
+        padding: .7em 0;
+        box-shadow: rgba(163, 163, 183, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin-top: 15px;
+        font-size: 20px;
+        transition: all .2s ease-in-out;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 1px;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+::ng-deep .mdc-snackbar__surface{
+    background-color: green !important;
+}
+::ng-deep .mdc-button__label, .mdc-snackbar__label{
+    color: white !important;
+}
+::ng-deep .mdc-snackbar__label{
+    color: white !important;
+}
+
+@media(max-width:500px) {
+    .form-master-container,
+    .add-member-details-container,
+    .verify-mobile-number-container {
+        .header-title {
+            margin-bottom: 10px;
+            padding: 7px 0;
+
+            h3 {
+                font-size: 1.4em;
+            }
+        }
+
+        form {
+            .input-wrapper {
+                margin: 10px 0 0 0;
+
+                .inputGroup {
+                    input {
+                        width: 100%;
+                        font-size: 18px;
+                    }
+
+                    label {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+
+        .add-member-button {
+            font-size: 17px;
+        }
+    }
+}
+
+@media(max-width:300px) {
+    .form-master-container,
+    .add-member-details-container,
+    .verify-mobile-number-container {
+        .header-title {
+            margin-bottom: 5px;
+            padding: 3px 0;
+
+            h3 {
+                font-size: 1em;
+            }
+        }
+
+        form {
+            .input-wrapper {
+                min-width: none;
+                width: 100%;
+                margin: 7px 0 0 0;
+
+                .inputGroup input {
+                    width: 100%;
+                    font-size: 12px;
+                }
+
+                .inputGroup label {
+                    font-size: .9em;
+                }
+
+                .inputGroup :is(input:focus, input:valid)~label {
+                    transform: translateY(-10%) translateX(-16%) scale(.7);
+                }
+
+                .inputGroup :is(input:focus, input:valid) {
+                    padding: 1.7em .5em .5em .77em;
+                }
+            }
+        }
+    }
+
+}

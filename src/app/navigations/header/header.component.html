@@ -1,0 +1,29 @@
+<div class="master-container" id="master-container">
+
+  <div class="container content-wrap">
+    <div class="title">
+      <h4 routerLink="/dashboard">Spoke Well</h4>
+    </div>
+    <div class="pages">
+      <span routerLink="create-group-and-admin" routerLinkActive="active">Create Group</span>
+      <span routerLink="/dashboard" routerLinkActive="active">Dashboard</span>
+    </div>
+  </div>
+
+  <!-- for mobile -->
+  <div class="container content-wrap-mobile">
+    <div class="title-and-btn-wrapper">
+      <div class="title">
+        <h4 routerLink="/dashboard">Spoke Well</h4>
+        <i class="fa-solid fa-bars" (click)="openMenu()" *ngIf="!menuOpenCloseState"></i>
+        <i class="fa-solid fa-xmark" (click)="closeMenu()" *ngIf="menuOpenCloseState"></i>
+      </div>
+    </div>
+
+    <div class="container pages" id="targetMenuList">
+      <span routerLink="create-group-and-admin" routerLinkActive="active">Create Group</span>
+      <span routerLink="/dashboard" routerLinkActive="active">Dashboard</span>
+    </div>
+  </div>
+
+</div>

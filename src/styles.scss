@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+:root {
+    --button: rgb(1, 160, 1);
+    --medium-green: #63cc95;
+    --light-green: #B4F1b2;
+    --text: #1c3325f1;
+    --white: #ffffff;
+    --light-green-bg-color: #dbffda;
+    --green-text-color: #008a3a;
+}
+
+body {
+    // background-color: var(--light-green-bg-color);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

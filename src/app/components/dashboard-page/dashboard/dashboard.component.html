@@ -1,0 +1,25 @@
+<div class="container">
+
+    <app-title-bar></app-title-bar>
+
+    <div class="members-detail-cards-container">
+        <div class="mem-cards-container" *ngIf="!mobileScreen">
+            <div class="mem-box" *ngFor="let names of memberNames">
+                <div class="mem-card">
+                    <p>{{names}}</p>
+                    <p matTooltip="Bad Words Count">10</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mem-cards-container-mobile" *ngIf="mobileScreen">
+            <div class="mem-box-mobile" *ngFor="let names of memberNames">
+                <div class="mem-card-mobile">
+                    <p>{{names}}</p>
+                    <p matTooltip="Bad Words Count">10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

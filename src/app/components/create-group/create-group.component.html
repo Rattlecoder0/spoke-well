@@ -1,0 +1,85 @@
+<div class="container">
+    <app-title-bar></app-title-bar>
+
+    <div class="form-master-container">
+
+        <div class="header-title">
+            <h3>Create Group</h3>
+        </div>
+        <form [formGroup]="groupNameForm">
+            <div class="input-wrapper">
+                <div class="inputGroup">
+                    <input type="text" formControlName="groupName" required>
+                    <label>Group Name</label>
+                </div>
+                <span class="error-message">error will occur here</span>
+            </div>
+            <div class="input-wrapper">
+                <div class="inputGroup"> 
+                    <input type="text" formControlName="penalty" required>
+                    <label>Penalty</label>
+                </div>
+                <span class="error-message">error will occur here</span>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="add-member-details-container">
+        <div class="header-title">
+            <h3>Admin Details</h3>
+        </div>
+        <form [formGroup]="adminDetailsForm">
+            <div class="input-wrapper">
+                <div class="inputGroup">
+                    <input type="text" formControlName="firstName" required>
+                    <label>First Name</label>
+                </div>
+                <span class="error-message">error will occur here</span>
+            </div>
+            <div class="input-wrapper">
+                <div class="inputGroup">
+                    <input type="text" formControlName="middleName" required>
+                    <label>Middle Name</label>
+                </div>
+                <span class="error-message">error will occur here</span>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="inputGroup">
+                    <input type="text" formControlName="lastName" required>
+                    <label>Last Name</label>
+                </div>
+                <span class="error-message">error will occur here</span>
+            </div>
+        </form>
+        <!-- <button type="submit" (click)="onSubmit()" [disabled]="adminDetailsForm.invalid" class="add-member-button">Finish Up</button> -->
+    </div>
+
+    <div class="verify-mobile-number-container">
+        <div class="header-title">
+            <h3>Verify Mobile Number</h3>
+        </div>
+        <form>
+            <div class="input-wrapper">
+                <div class="inputGroup">
+                    <input type="text" formControlName="lastName" required maxlength="10">
+                    <label>Mobile No</label>
+                </div>
+                <span class="error-message">error will occur here</span>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<!-- <div class="input-wrapper">
+                <div class="inputGroup">
+                    <input type="text" matInput [matDatepicker]="picker">
+                    <label>Date</label>
+                </div>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker></mat-datepicker>
+                <span class="error-message">error will occur here</span>
+            </div> -->
